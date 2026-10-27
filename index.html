@@ -120,8 +120,7 @@ section{padding:64px 0}
 .checks svg{width:20px;height:20px;flex:none;margin-top:4px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;background:var(--yellow);border-radius:50%;padding:3px}
 
 /* message */
-.msg{margin-top:28px;display:grid;gap:18px;align-items:center}
-.msg-photo{width:140px;height:140px;border-radius:50%;background:var(--yellow-pale);border:1.5px dashed var(--ink-soft);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink-soft);text-align:center;line-height:1.5}
+.msg{margin:28px auto 0;max-width:560px}
 .msg-body{background:var(--yellow-pale);border:1.5px solid var(--ink);border-radius:20px;padding:22px 20px;font-size:16px;line-height:2;color:var(--ink);text-align:center;text-wrap:balance}
 .msg-name{margin-top:10px;font-size:13px;text-align:center}
 
@@ -154,8 +153,6 @@ footer{padding:28px 0 40px;text-align:center;font-size:12px;color:var(--ink-soft
   .grid{grid-template-columns:repeat(2,1fr)}
   .grid .item.wide{grid-column:1 / -1}
   .join{grid-template-columns:repeat(3,1fr)}
-  .msg{grid-template-columns:160px 1fr}
-  .msg-body{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
@@ -344,7 +341,6 @@ footer{padding:28px 0 40px;text-align:center;font-size:12px;color:var(--ink-soft
   <div class="wrap narrow">
     <h2 class="h2">主宰メッセージ</h2>
     <div class="msg">
-      <div class="msg-photo">写真が<br>入ります</div>
       <div>
         <div class="msg-body"><span class="ib">kashiko®︎メソッドの講師らしく、</span><span class="ib">感性を磨きながら、</span><span class="ib">自己表現を楽しめる場所です。</span><br><span class="ib">主体的に学ぶ姿勢を、</span><span class="ib">一緒に育てていきましょう。</span></div>
         <p class="msg-name">主宰　藤本 れもん</p>
