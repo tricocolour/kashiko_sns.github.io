@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>かしこSNSスクール｜発信は、ひとりで頑張らなくていい。</title>
+<meta name="description" content="やる気が落ちても、離れても、また戻ってこられる場所。月額3,300円（税込）で、朝活・グルコン・セミナー・添削会・アーカイブ視聴がすべて使えます。">
+<meta property="og:title" content="かしこSNSスクール">
+<meta property="og:description" content="発信は、ひとりで頑張らなくていい。やる気が落ちても、離れても、また戻ってこられる場所。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#555555;
+  --ink-soft:#767676;
+  --yellow:#F2E35A;
+  --yellow-pale:#FFF8D2;
+  --line:#E6E6E6;
+  --white:#FFFFFF;
+  --head:'Zen Maru Gothic','Noto Sans JP',sans-serif;
+  --body:'Noto Sans JP',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.9;font-size:16px;-webkit-text-size-adjust:100%;word-break:auto-phrase;overflow-wrap:anywhere}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:960px;margin:0 auto;padding:0 20px}
+.narrow{max-width:720px}
+section{padding:64px 0}
+.h2{font-family:var(--head);font-weight:700;font-size:clamp(22px,5.4vw,30px);line-height:1.6;text-align:center;text-wrap:balance}
+.lead{text-align:center;color:var(--ink-soft);margin-top:12px;font-size:15px;text-wrap:balance}
+.ib{display:inline-block}
+.mk{background:var(--yellow);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.ic{width:56px;height:56px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;flex:none;color:var(--ink)}
+.ic svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card{background:var(--white);border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.05);padding:24px 22px}
+.bubble{position:relative;background:var(--yellow-pale);border:1.5px solid var(--ink);border-radius:18px;padding:16px 22px;text-align:center;font-size:15px;text-wrap:balance}
+.bubble::after{content:"";position:absolute;right:44px;bottom:-9px;width:16px;height:16px;background:var(--yellow-pale);border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:rotate(45deg)}
+.btn{display:inline-block;background:var(--yellow);color:var(--ink);font-family:var(--head);font-weight:700;font-size:17px;text-decoration:none;border-radius:999px;padding:15px 38px;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.btn-wrap{text-align:center;margin-top:28px}
+.alt{background:#FFFDF0}
+
+/* hero */
+.hero{padding:40px 0 56px;overflow:hidden}
+.hero-in{display:grid;gap:8px;align-items:center}
+.deco{width:100%;max-width:360px;margin:0 auto}
+.hero-card{border:1.5px solid var(--ink);border-radius:32px;padding:34px 22px 30px;text-align:center;background:var(--white);box-shadow:0 3px 14px rgba(0,0,0,.06)}
+.hero-brand{font-size:13px;color:var(--ink-soft);letter-spacing:.08em}
+.hero h1{font-family:var(--head);font-weight:700;font-size:clamp(26px,7.4vw,40px);line-height:1.6;margin:10px 0 14px;text-wrap:balance}
+.hero p.sub{font-size:15px;color:var(--ink-soft);text-wrap:balance}
+.hero-price{display:inline-block;margin-top:20px;background:var(--yellow-pale);border:1.5px solid var(--ink);border-radius:14px;padding:6px 18px;font-size:14px}
+.hero-price b{font-family:var(--head);font-size:20px;background:var(--yellow);padding:0 .2em}
+.hero .btn-wrap{margin-top:22px}
+.hero-note{font-size:12px;color:var(--ink-soft);margin-top:10px}
+
+/* worries */
+.worries{display:grid;gap:12px;margin-top:32px}
+.worry{display:flex;gap:14px;align-items:center;padding:16px 18px}
+.worry .ic{width:40px;height:40px}
+.worry .ic svg{width:20px;height:20px}
+.worry p{font-size:15px;line-height:1.7}
+.worries-end{margin:36px auto 0;max-width:520px}
+
+/* about */
+.about-text{margin-top:24px;text-align:left}
+.about-text p+p{margin-top:14px}
+.points{display:grid;gap:14px;margin-top:32px}
+.point{display:flex;gap:16px;align-items:flex-start}
+.point h3{font-family:var(--head);font-size:17px;line-height:1.6}
+.point p{font-size:14px;color:var(--ink-soft);line-height:1.8;margin-top:2px}
+
+/* contents */
+.grid{display:grid;gap:16px;margin-top:32px}
+.item{text-align:left}
+.item .top{display:flex;gap:14px;align-items:center}
+.item h3{font-family:var(--head);font-size:19px;line-height:1.5}
+.when{display:inline-block;margin-top:2px;font-size:13px;background:var(--yellow-pale);border-radius:8px;padding:2px 10px;color:var(--ink)}
+.item p.desc{margin-top:12px;font-size:14px;line-height:1.8;color:var(--ink-soft)}
+.note{margin-top:22px;text-align:center;font-size:13px;color:var(--ink-soft)}
+
+/* program */
+.steps{margin-top:36px;display:grid;gap:0}
+.step{position:relative;display:grid;grid-template-columns:76px 1fr;gap:16px;padding-bottom:30px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:37px;top:76px;bottom:0;border-left:4px dotted var(--yellow)}
+.step:last-child::before{display:none}
+.badge{width:76px;height:76px;border-radius:50%;background:var(--yellow);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--head);font-weight:700;line-height:1.2}
+.badge small{font-size:11px;letter-spacing:.06em}
+.badge span{font-size:26px}
+.step h3{font-family:var(--head);font-size:19px;line-height:1.6;margin-top:2px}
+.step p{font-size:14px;line-height:1.85;color:var(--ink-soft);margin-top:4px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:12px;background:var(--yellow-pale);border:1px solid var(--yellow);border-radius:999px;padding:2px 12px;color:var(--ink)}
+.program-end{margin:40px auto 0;max-width:520px}
+
+/* join */
+.join{display:grid;gap:14px;margin-top:32px}
+.join .card{text-align:center}
+.join .ic{margin:0 auto 10px}
+.join h3{font-family:var(--head);font-size:18px}
+.join p{font-size:14px;color:var(--ink-soft);margin-top:6px;line-height:1.8}
+
+/* bonus */
+.bonus{text-align:center}
+.bonus-box{margin:28px auto 0;max-width:560px;border:1.5px solid var(--ink);border-radius:28px;background:var(--white);padding:30px 22px}
+.bonus-box .ic{margin:0 auto 12px}
+.bonus-box h3{font-family:var(--head);font-size:clamp(18px,4.8vw,22px);line-height:1.7;text-wrap:balance}
+.bonus-box p{font-size:13px;color:var(--ink-soft);margin-top:10px}
+
+/* price */
+.price-box{margin:28px auto 0;max-width:520px;text-align:center}
+.price{font-family:var(--head);font-weight:700;font-size:clamp(38px,11vw,52px);line-height:1.3}
+.price small{font-size:15px;font-weight:500}
+.checks{list-style:none;margin:20px auto 0;display:inline-block;text-align:left}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.7;padding:3px 0}
+.checks svg{width:20px;height:20px;flex:none;margin-top:4px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;background:var(--yellow);border-radius:50%;padding:3px}
+
+/* message */
+.msg{margin-top:28px;display:grid;gap:18px;align-items:center}
+.msg-photo{width:140px;height:140px;border-radius:50%;background:var(--yellow-pale);border:1.5px dashed var(--ink-soft);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink-soft);text-align:center;line-height:1.5}
+.msg-body{border:1.5px dashed var(--ink-soft);border-radius:20px;padding:22px 20px;font-size:15px;color:var(--ink-soft);text-align:center}
+.msg-name{margin-top:10px;font-size:13px;text-align:center}
+
+/* faq */
+.faq{margin-top:28px;display:grid;gap:12px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:0 18px}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:flex-start;padding:16px 0;font-weight:500;line-height:1.7}
+.faq summary::-webkit-details-marker{display:none}
+.q,.a{font-family:var(--head);font-weight:700;width:28px;height:28px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:14px}
+.q{background:var(--yellow)}
+.a{background:var(--yellow-pale);border:1px solid var(--yellow)}
+.faq summary span.t{flex:1}
+.faq summary::after{content:"＋";margin-left:auto;color:var(--ink-soft);flex:none}
+.faq details[open] summary::after{content:"－"}
+.faq .ans{display:flex;gap:12px;align-items:flex-start;padding:0 0 18px;font-size:14px;line-height:1.85;color:var(--ink-soft)}
+.faq .ans div:last-child{flex:1}
+
+/* final */
+.final{text-align:center}
+footer{padding:28px 0 40px;text-align:center;font-size:12px;color:var(--ink-soft)}
+
+@media (min-width:760px){
+  section{padding:84px 0}
+  .hero{padding:64px 0 80px}
+  .hero-in{grid-template-columns:.8fr 1.2fr;gap:24px}
+  .hero-card{padding:48px 36px 40px}
+  .worries{grid-template-columns:1fr 1fr}
+  .points{grid-template-columns:repeat(3,1fr)}
+  .point{flex-direction:column;align-items:center;text-align:center}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid .item.wide{grid-column:1 / -1}
+  .join{grid-template-columns:repeat(3,1fr)}
+  .msg{grid-template-columns:160px 1fr}
+  .msg-body{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1h-8l-5 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"/></symbol>
+  <symbol id="i-present" viewBox="0 0 24 24"><path d="M3 4h18v12H3zM12 16v4M8 20h8M7 12l3-3 3 2 4-4"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1zM14 7l3 3"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 9c0 6-8 11-8 11z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.8a3.5 3.5 0 010 6.4M18 14.3c2.2.7 3.5 2.6 3.5 5.7"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 10h16v10H4zM3 7h18v3H3zM12 7v13M12 7C10 3 6 4 7.5 7M12 7c2-4 6-3 4.5 0"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M5 21V4a1 1 0 011-1h9a1 1 0 011 1v17M3 21h18M12 12h.01"/></symbol>
+  <symbol id="i-pc" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+</svg>
+
+<!-- 1. ファーストビュー -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-in">
+      <svg class="deco" viewBox="0 0 340 200" role="img" aria-label="黄色い丸のアイコンが点線でつながるイラスト">
+        <path d="M 22 178 Q 62 40 318 52" fill="none" stroke="#F2E35A" stroke-width="5" stroke-dasharray="1 11" stroke-linecap="round"/>
+        <circle cx="52" cy="158" r="36" fill="#F2E35A"/>
+        <circle cx="140" cy="82" r="36" fill="#F2E35A"/>
+        <circle cx="244" cy="54" r="36" fill="#FFF3A0"/>
+        <g fill="none" stroke="#555" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" color="#555">
+          <use href="#i-heart" x="34" y="140" width="36" height="36"/>
+          <use href="#i-chat" x="122" y="64" width="36" height="36"/>
+          <use href="#i-bulb" x="226" y="36" width="36" height="36"/>
+        </g>
+      </svg>
+      <div class="hero-card">
+        <div class="hero-brand">かしこSNSスクール</div>
+        <h1><span class="ib">発信は、</span><span class="mk">ひとりで</span><span class="ib">頑張らなくていい。</span></h1>
+        <p class="sub">やる気が落ちても、離れても、<br>また戻ってこられる場所。</p>
+        <div class="hero-price">月額 <b>3,300円</b>（税込）</div>
+        <div class="btn-wrap"><a class="btn" href="https://ssl.form-mailer.jp/fms/259f0753875564">お申し込みはこちら</a></div>
+        <p class="hero-note">どの月からでも、いつでも始められます</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 2. お悩み -->
+<section class="alt" id="worries">
+  <div class="wrap narrow">
+    <h2 class="h2">こんなお悩み、<span class="ib">ありませんか？</span></h2>
+    <div class="worries">
+      <div class="card worry"><div class="ic"><svg><use href="#i-door"/></svg></div><p>発信したことがなくて、<span class="ib">何から始めればいいか</span><span class="ib">わからない</span></p></div>
+      <div class="card worry"><div class="ic"><svg><use href="#i-pencil"/></svg></div><p>始めてみたけれど、<span class="ib">気づくと止まって</span><span class="ib">しまう</span></p></div>
+      <div class="card worry"><div class="ic"><svg><use href="#i-sun"/></svg></div><p>ひとりだと、<span class="ib">なかなか続かない</span></p></div>
+      <div class="card worry"><div class="ic"><svg><use href="#i-users"/></svg></div><p>ほかの人はどうしているか、<span class="ib">聞ける人がいない</span></p></div>
+    </div>
+    <div class="bubble worries-end"><span class="ib">ひとりで抱えなくて大丈夫。</span><span class="ib"><span class="mk">ここに仲間がいます</span></span></div>
+  </div>
+</section>
+
+<!-- 3. スクールとは -->
+<section id="about">
+  <div class="wrap narrow">
+    <h2 class="h2"><span class="ib">離れても、また戻ってこられる</span><span class="ib">場所です</span></h2>
+    <div class="about-text">
+      <p>発信は、短期間で身につくものではありません。だからこそ、横のつながりと、いつでも質問できる場所を用意しました。</p>
+      <p>ノウハウもしっかりお伝えします。でも、忙しくなったり、やる気が落ちて離れたりすることがあっても大丈夫。<span class="mk">ここは変わらず、迎え入れます。</span></p>
+    </div>
+    <div class="points">
+      <div class="point"><div class="ic"><svg><use href="#i-bulb"/></svg></div><div><h3>自分で考える</h3><p>答えを教えるのではなく、<span class="ib">自分の中から</span><span class="ib">見つける時間を。</span></p></div></div>
+      <div class="point"><div class="ic"><svg><use href="#i-pencil"/></svg></div><div><h3>自分の言葉で出す</h3><p>うまく書くより、<span class="ib">まず自分の言葉で</span><span class="ib">アウトプット。</span></p></div></div>
+      <div class="point"><div class="ic"><svg><use href="#i-chat"/></svg></div><div><h3>AIは、お助け役</h3><p>壁打ちや時短に<span class="ib">上手に使います。</span><span class="ib">決めるのは自分です。</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 5つの内容 -->
+<section class="alt" id="contents">
+  <div class="wrap">
+    <h2 class="h2">月額3,300円で、<span class="ib">この5つが使えます</span></h2>
+    <p class="lead">すべてオンライン（Google Meet）。<span class="ib">参加は「できるときに」で</span><span class="ib">大丈夫です。</span></p>
+    <div class="grid">
+      <div class="card item">
+        <div class="top"><div class="ic"><svg><use href="#i-sun"/></svg></div><div><h3>朝活</h3><span class="when">火・金　5:30〜6:30</span></div></div>
+        <p class="desc">続けたいことを、仲間と一緒に。ひとりだと続かない習慣づくりを後押しします。</p>
+      </div>
+      <div class="card item">
+        <div class="top"><div class="ic"><svg><use href="#i-chat"/></svg></div><div><h3>グルコン</h3><span class="when">第1・3水曜　9:00〜11:00</span></div></div>
+        <p class="desc">グループで気軽に相談できる時間。ほかの人の悩みも、自分の学びになります。</p>
+      </div>
+      <div class="card item">
+        <div class="top"><div class="ic"><svg><use href="#i-present"/></svg></div><div><h3>セミナー</h3><span class="when">第3金曜　21:30〜23:30</span></div></div>
+        <p class="desc">3ヶ月プログラムに沿って、発信の土台から軌道修正まで。初心者〜中級者向けの内容です。</p>
+      </div>
+      <div class="card item">
+        <div class="top"><div class="ic"><svg><use href="#i-pencil"/></svg></div><div><h3>なんでも添削会</h3><span class="when">第2水曜　9:00〜11:00</span><br><span class="when">第4金曜　21:30〜23:30</span></div></div>
+        <p class="desc">プロフィール、投稿、ちょっとした迷いまで。なんでも見てもらえます。</p>
+      </div>
+      <div class="card item wide">
+        <div class="top"><div class="ic"><svg><use href="#i-play"/></svg></div><div><h3>いつでもアーカイブ視聴</h3><span class="when">好きな時間に、何度でも</span></div></div>
+        <p class="desc">リアルタイムで参加できなくても大丈夫。育児や仕事の合間に見返せます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 3ヶ月プログラム -->
+<section id="program">
+  <div class="wrap narrow">
+    <h2 class="h2">3ヶ月プログラム</h2>
+    <p class="lead"><span class="ib">どの月からでも始められます。</span><span class="ib">セミナーは月ごとに進み、</span><span class="ib">3ヶ月でひと巡りします。</span></p>
+    <div class="steps">
+      <div class="step">
+        <div class="badge"><small>STEP</small><span>1</span></div>
+        <div>
+          <h3>自己理解 → ビジョン設定</h3>
+          <p>kashiko®︎色彩ワークで、まず自分と向き合います。「誰に、何を、なぜ伝えたいか」を、自分の言葉にしていく期間です。この期間は、グルコンでも色彩ワークに取り組むことがあります。</p>
+          <div class="tags"><span class="tag">kashiko®︎色彩ワーク</span><span class="tag">ペルソナ設定シート</span><span class="tag">ビジョンシート</span></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="badge"><small>STEP</small><span>2</span></div>
+        <div>
+          <h3>SNS発信（行動）</h3>
+          <p>決めたことを、まず投稿として出してみる期間。ネタ出しや投稿の型、無理のないペースづくりを学びながら、朝活と添削会で続ける仕組みを作ります。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="badge"><small>STEP</small><span>3</span></div>
+        <div>
+          <h3>振り返り → 軌道修正</h3>
+          <p>反応を見ながら、自分に合う形に整えていきます。うまくいったこと、止まったことを振り返って、次の3ヶ月のイメージを描きます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="bubble program-end"><span class="ib">途中から入っても、</span><span class="ib"><span class="mk">アーカイブで見返せます</span></span></div>
+  </div>
+</section>
+
+<!-- 6. 参加の仕方 -->
+<section class="alt" id="join">
+  <div class="wrap">
+    <h2 class="h2">参加の仕方は、<span class="ib">3つあります</span></h2>
+    <div class="join">
+      <div class="card"><div class="ic"><svg><use href="#i-pc"/></svg></div><h3>リアル参加</h3><p>セミナーやグルコンで、<span class="ib">その場で</span><span class="ib">アドバイスがもらえます。</span></p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-play"/></svg></div><h3>アーカイブで参加</h3><p>参加できない日は、<span class="ib">アーカイブを見て</span><span class="ib">できることから。</span></p></div>
+      <div class="card"><div class="ic"><svg><use href="#i-chat"/></svg></div><h3>スクール内で質問</h3><p>わからないことは、<span class="ib">かしこSNSスクール内で</span><span class="ib">いつでも質問できます。</span></p></div>
+    </div>
+    <p class="note">毎回出なくて大丈夫。できるときに、できる形で。</p>
+  </div>
+</section>
+
+<!-- 7. 特典 -->
+<section class="bonus" id="bonus">
+  <div class="wrap">
+    <h2 class="h2">続けた人への、<span class="ib">うれしい特典</span></h2>
+    <div class="bonus-box">
+      <div class="ic"><svg><use href="#i-gift"/></svg></div>
+      <h3><span class="ib">グルコン・セミナーに</span><span class="ib">合計<span class="mk">10回</span>参加すると、</span><br><span class="ib"><span class="mk">個別相談1回</span>をプレゼント</span></h3>
+      <p>※朝活は回数に含まれません</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. 料金・お申し込み -->
+<section class="alt final" id="apply">
+  <div class="wrap narrow">
+    <h2 class="h2">料金とお申し込み</h2>
+    <div class="card price-box">
+      <div class="price">月額 3,300<small>円（税込）</small></div>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>朝活・グルコン・セミナー</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>なんでも添削会</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>いつでもアーカイブ視聴</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>スクール内でいつでも質問</li>
+      </ul>
+      <div class="btn-wrap"><a class="btn" href="https://ssl.form-mailer.jp/fms/259f0753875564">お申し込みはこちら</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. 代表メッセージ（ダミー） -->
+<section id="message">
+  <div class="wrap narrow">
+    <h2 class="h2">代表メッセージ</h2>
+    <div class="msg">
+      <div class="msg-photo">写真が<br>入ります</div>
+      <div>
+        <div class="msg-body">ここに代表メッセージが入ります。</div>
+        <p class="msg-name">藤本 れもん　kashiko®︎メソッド講師</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. よくある質問 -->
+<section class="alt" id="faq">
+  <div class="wrap narrow">
+    <h2 class="h2">よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary><span class="q">Q</span><span class="t">途中からでも大丈夫ですか？</span></summary>
+        <div class="ans"><span class="a">A</span><div>はい、どの月からでも始められます。参加できなかったセミナーは、アーカイブで見返せます。</div></div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span class="t">仕事や育児で、参加できない日があります</span></summary>
+        <div class="ans"><span class="a">A</span><div>毎回出なくて大丈夫です。アーカイブを見て、できることから進めてください。わからないことは、スクール内でいつでも質問できます。</div></div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span class="t">SNS初心者でも参加できますか？</span></summary>
+        <div class="ans"><span class="a">A</span><div>はい。セミナーは初心者〜中級者向けの内容です。発信したことがない方も、始めたけれど止まってしまった方も歓迎です。</div></div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span class="t">やる気が落ちてしまったら？</span></summary>
+        <div class="ans"><span class="a">A</span><div>そんな時期も、ありますよね。離れても大丈夫です。また戻りたくなったときに、いつでも迎え入れます。</div></div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span class="t">AIの使い方も教えてもらえますか？</span></summary>
+        <div class="ans"><span class="a">A</span><div>必要に応じてお伝えします。ただ、このスクールで大切にしているのは、自分で考えて、自分の言葉でアウトプットすること。AIは、壁打ちや時短のお助け役として使います。</div></div>
+      </details>
+    </div>
+    <div class="btn-wrap"><a class="btn" href="https://ssl.form-mailer.jp/fms/259f0753875564">お申し込みはこちら</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© kashiko® かしこSNSスクール</div>
+</footer>
+
+</body>
+</html>
